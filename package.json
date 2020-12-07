@@ -1,0 +1,69 @@
+{
+  "name": "atom-browserslist",
+  "version": "0.0.1",
+  "description": "Adds syntax highlighting to .browserslistrc files in Atom.",
+  "keywords": [
+    "atom",
+    "atom-package",
+    "browserslist",
+    "browserslistrc",
+    "syntax-highlighting"
+  ],
+  "author": {
+    "name": "Matteo Bertoldo",
+    "email": "mrbert93@gmail.com",
+    "url": "https://github.com/matteobertoldo"
+  },
+  "bugs": {
+    "url": "https://github.com/matteobertoldo/atom-browserslist/issues"
+  },
+  "repository": "https://github.com/matteobertoldo/atom-browserslist",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.21.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@prettier/plugin-xml": "^0.12.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "remark-cli": "^9.0.0",
+    "remark-lint-no-dead-urls": "^1.1.0",
+    "remark-preset-lint-recommended": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,yml}": "prettier --write",
+    "*.md": "remark --silently-ignore",
+    "*.js": "eslint"
+  },
+  "scripts": {
+    "format": "prettier --config .prettierrc --write \"./**/*.{md,js,json,yml}\"",
+    "lint": "npm run lint:js && npm run lint:markdown",
+    "lint:js": "eslint .",
+    "lint:markdown": "remark .",
+    "parse": "npm run format && npm run lint",
+    "test": "atom --test spec"
+  }
+}

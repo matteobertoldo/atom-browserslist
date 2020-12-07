@@ -1,0 +1,111 @@
+{
+  "scopeName": "source.sql.browserslist",
+  "name": "Browserslist",
+  "fileTypes": ["browserslistrc"],
+  "patterns": [
+    {
+      "include": "#browsers"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#configs"
+    },
+    {
+      "include": "#dates"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#sections"
+    },
+    {
+      "include": "#versions"
+    }
+  ],
+  "repository": {
+    "browsers": {
+      "patterns": [
+        {
+          "name": "support.type.browserslist",
+          "match": "(?i)\\b(Android|Baidu|BlackBerry|bb|Chrome|ChromeAndroid|and_chr|Edge|Electron|Explorer|ie|ExplorerMobile|ie_mob|Firefox|ff|FirefoxAndroid|and_ff|iOS|ios_saf|Node|Opera|OperaMini|op_mini|OperaMobile|op_mob|PhantomJS|QQAndroid|and_qq|Safari|Samsung|UCAndroid|and_uc|kaios)\\b"
+        }
+      ]
+    },
+    "comment": {
+      "name": "comment.line.browserslist",
+      "begin": "#",
+      "end": "\n"
+    },
+    "configs": {
+      "patterns": [
+        {
+          "name": "entity.name.class.browserslist",
+          "match": "@\\w+\\/browserslist-config(-.+)?"
+        },
+        {
+          "name": "entity.name.class.browserslist",
+          "match": "\\bbrowserslist-config-\\w+\\b"
+        }
+      ]
+    },
+    "dates": {
+      "patterns": [
+        {
+          "name": "constant.numeric.date.browserslist",
+          "match": "years?"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.browserslist",
+          "match": "(<=?|>=?|,)"
+        },
+        {
+          "name": "keyword.control.browserslist",
+          "match": "\\b(and|cover|extends|in|last|not|or|since|supports)\\b"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "entity.name.function.browserslist",
+          "match": "defaults"
+        },
+        {
+          "name": "entity.name.function.browserslist",
+          "match": "(\\[|\\])"
+        },
+        {
+          "name": "entity.name.function.browserslist",
+          "match": "(?!\\[)(.+)(?=\\])"
+        }
+      ]
+    },
+    "versions": {
+      "patterns": [
+        {
+          "name": "constant.numeric.browserslist",
+          "match": "\\b\\d+(.\\d+){0,2}\\b"
+        },
+        {
+          "name": "constant.numeric.browserslist",
+          "match": "(?i)\\b(esr|tp|all|dead|unreleased|major|versions?)\\b"
+        },
+        {
+          "name": "constant.numeric.marketshares.browserslist",
+          "match": "(\\d*\\.)?\\d+%"
+        },
+        {
+          "name": "constant.numeric.node.browserslist",
+          "match": "(?i)\\b(current|maintained?)\\b"
+        }
+      ]
+    }
+  }
+}

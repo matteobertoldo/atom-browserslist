@@ -1,0 +1,22 @@
+{
+  "env": {
+    "atomtest": true,
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jasmine": true
+  },
+  "extends": ["plugin:prettier/recommended", "standard"],
+  "globals": {
+    "atom": true
+  },
+  "rules": {
+    "global-require": "error",
+    "import/extensions": ["error", "never"],
+    "indent": ["error", 2],
+    "no-console": "error",
+    "no-var": "error",
+    "semi": ["error", "always"],
+    "space-before-function-paren": 0
+  }
+}
