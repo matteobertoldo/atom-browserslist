@@ -4,6 +4,7 @@
 # ignored files and dirs on tags
 .github/ export-ignore
 assets/ export-ignore
+.browserslistrc export-ignore
 .editorconfig export-ignore
 .eslintrc.json export-ignore
 .gitattributes export-ignore

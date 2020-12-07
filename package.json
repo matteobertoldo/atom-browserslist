@@ -6,7 +6,7 @@
     "atom",
     "atom-package",
     "browserslist",
-    "browserslistrc",
+    "browserslist-config",
     "syntax-highlighting"
   ],
   "author": {
