@@ -4,9 +4,6 @@
   "fileTypes": ["browserslistrc"],
   "patterns": [
     {
-      "include": "#browsers"
-    },
-    {
       "include": "#comment"
     },
     {
@@ -14,6 +11,9 @@
     },
     {
       "include": "#dates"
+    },
+    {
+      "include": "#environments"
     },
     {
       "include": "#keywords"
@@ -26,14 +26,6 @@
     }
   ],
   "repository": {
-    "browsers": {
-      "patterns": [
-        {
-          "name": "support.type.browserslist",
-          "match": "(?i)\\b(Android|Baidu|BlackBerry|bb|Chrome|ChromeAndroid|and_chr|Edge|Electron|Explorer|ie|ExplorerMobile|ie_mob|Firefox|ff|FirefoxAndroid|and_ff|iOS|ios_saf|Node|Opera|OperaMini|op_mini|OperaMobile|op_mob|PhantomJS|QQAndroid|and_qq|Safari|Samsung|UCAndroid|and_uc|kaios)\\b"
-        }
-      ]
-    },
     "comment": {
       "name": "comment.line.browserslist",
       "begin": "#",
@@ -59,14 +51,26 @@
         }
       ]
     },
+    "environments": {
+      "patterns": [
+        {
+          "name": "support.type.browser.browserslist",
+          "match": "(?i)\\b(Android|Baidu|BlackBerry|bb|Chrome|ChromeAndroid|and_chr|Edge|Electron|Explorer|ie|ExplorerMobile|ie_mob|Firefox|ff|FirefoxAndroid|and_ff|iOS|ios_saf|Opera|OperaMini|op_mini|OperaMobile|op_mob|PhantomJS|QQAndroid|and_qq|Safari|Samsung|UCAndroid|and_uc|kaios)\\b"
+        },
+        {
+          "name": "support.type.node.browserslist",
+          "match": "(?i)\\bNode\\b"
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.browserslist",
+          "name": "keyword.control.operator.browserslist",
           "match": "(<=?|>=?|,)"
         },
         {
-          "name": "keyword.control.browserslist",
+          "name": "keyword.control.keyword.browserslist",
           "match": "\\b(and|cover|extends|in|last|not|or|since|supports)\\b"
         }
       ]
@@ -94,12 +98,16 @@
           "match": "\\b\\d+(.\\d+){0,2}\\b"
         },
         {
-          "name": "constant.numeric.browserslist",
+          "name": "constant.numeric.divider.browserslist",
+          "match": "(\\d*\\.)?\\d"
+        },
+        {
+          "name": "constant.numeric.keyword.browserslist",
           "match": "(?i)\\b(esr|tp|all|dead|unreleased|major|versions?)\\b"
         },
         {
           "name": "constant.numeric.marketshares.browserslist",
-          "match": "(\\d*\\.)?\\d+%"
+          "match": "%"
         },
         {
           "name": "constant.numeric.node.browserslist",
