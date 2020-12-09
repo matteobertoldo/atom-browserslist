@@ -33,3 +33,7 @@ apm install atom-browserslist
 ### Atom One Light
 
 ![one-light](https://user-images.githubusercontent.com/15775323/101670433-6ec47f00-3a53-11eb-91b1-676dc8e5e5c7.png)
+
+## License
+
+Atom Browserslist is released under the [MIT](https://github.com/matteobertoldo/atom-browserslist/blob/master/LICENSE) license.
