@@ -1,6 +1,6 @@
 {
   "name": "atom-browserslist",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds syntax highlighting to .browserslistrc files in Atom.",
   "keywords": [
     "atom",
@@ -45,7 +45,8 @@
     "prettier": "^2.1.2",
     "remark-cli": "^9.0.0",
     "remark-lint-no-dead-urls": "^1.1.0",
-    "remark-preset-lint-recommended": "^5.0.0"
+    "remark-preset-lint-recommended": "^5.0.0",
+    "standard-version": "^9.0.0"
   },
   "husky": {
     "hooks": {
@@ -64,6 +65,7 @@
     "lint:js": "eslint .",
     "lint:markdown": "remark .",
     "parse": "npm run format && npm run lint",
+    "release": "npx standard-version",
     "test": "atom --test spec"
   }
 }
