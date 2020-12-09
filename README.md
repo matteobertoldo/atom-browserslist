@@ -28,4 +28,8 @@ apm install atom-browserslist
 
 ### Atom One Dark
 
+![one-dark](https://user-images.githubusercontent.com/15775323/101669819-af6fc880-3a52-11eb-89cc-437000f76b23.png)
+
 ### Atom One Light
+
+![one-light](https://user-images.githubusercontent.com/15775323/101670433-6ec47f00-3a53-11eb-91b1-676dc8e5e5c7.png)
