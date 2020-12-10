@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for a new feature in Atom Browserlist.
+about: Suggest an idea for a new feature in Atom Browserslist.
 title: ''
 labels: enhancement
 assignees: matteobertoldo

@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us to improve Atom Browserlist.
+about: Create a report to help us to improve Atom Browserslist.
 title: ''
 labels: bug
 assignees: matteobertoldo

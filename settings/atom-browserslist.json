@@ -1,0 +1,7 @@
+{
+  ".source.sql.browserslist": {
+    "editor": {
+      "commentStart": "#"
+    }
+  }
+}
